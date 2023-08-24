@@ -48,14 +48,14 @@ jobs:
 
       - name: Test with flake8
         run: |
-          flake8 primos_test.py
+          flake8 primo_test.py
       
       - name: Test with pytest
         run: |
-          pytest primos_test.py
+          pytest primo_test.py
 
       - name: upload file
-        run: aws s3 cp path/to/primos_test.py s3://khadajhinnnn/
+        run: aws s3 cp path/to/primo_test.py s3://khadajhinnnn/
           
 
       # Runs a single command using the runners shell
