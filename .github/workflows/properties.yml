@@ -55,7 +55,11 @@ jobs:
           pytest primo_test.py
 
       - name: upload file
-        run: aws s3 cp path/to/primo_test.py s3://khadajhinnnn/
+        run: |
+          file_name: primo_test.py
+          bucket_name: khadajhinnnn
+          pip install awscli
+          aws s3 cp $file_name s3://$bucket_name
           
 
       # Runs a single command using the runners shell
